@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@font-face {
+    font-family: Blk; 
+    src: url('Blackout\ Sunrise.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+body {
+    
+    //background-size: ;
+    background-position: center;
+    
+    //background-color: skyblue;
+}
+section {
+    height: 100vh;
+    margin: 0 5rem ;
+}
+.btn {
+    border:2px solid skyblue;
+    padding: 5px 8px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight:500;
+    color: skyblue;
+}
+/***********
+   General
+***********/
+h1 {
+    font-family: Blk;
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+/**********
+
+**********/
+
+
+.nav {
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    position:fixed;
+    width: 100%;
+}
+.logo {
+    font-family: 'Monoton', cursive;
+    font-size: 30px;
+    color:rgb(126, 123, 123);
+}
+.menu {
+    display: flex;
+    align-items: center;
+    i {
+        font-size: 25px;
+        color: #92acc3;
+    }
+}
+
+
+.hero {
+    display:flex;
+    align-items: center;
+    //background-color: skyblue;
+    //background-size: 50%;
+    .img-ctr{
+        height:100%;
+        width:50%;
+        background-color: #de9e57;
+        display:flex;
+        align-items: center;
+        img {
+            width:100%;
+        }
+    }
+}
+
+.skills {
+    //display:flex;
+    
+    .title-ctr {
+        width:100%;
+        display:flex;
+        justify-content: flex-end;
+    }
+
+    .sk-icon-ctr ul {
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+.contact {
+    .gif-ctr{
+        width: 50%;
+        height: 100%;
+        background-color: #5edfa7;
+    }
+}

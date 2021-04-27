@@ -4,10 +4,8 @@
   font-family: Blk;
   src: url("Blackout Sunrise.ttf");
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: Inter;
@@ -52,78 +50,50 @@ h3 {
 **********/
 .nav {
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: fixed;
   width: 100%;
 }
 
 .logo {
-  font-family: 'Monoton', cursive;
+  font-family: "Monoton", cursive;
   font-size: 30px;
   color: #7e7b7b;
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .menu i {
   font-size: 25px;
   color: #92acc3;
 }
 
 .hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .hero .img-ctr {
   height: 100%;
   width: 50%;
   background-color: #de9e57;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .hero .img-ctr img {
   width: 100%;
 }
 
 .skills .title-ctr {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
-
 .skills .sk-icon-ctr ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .contact .gif-ctr {
@@ -131,4 +101,3 @@ h3 {
   height: 100%;
   background-color: #5edfa7;
 }
-/*# sourceMappingURL=style.css.map */
