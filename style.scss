@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: Blk; 
     src: url('Blackout\ Sunrise.ttf');
 }
+
+/***********
+   General
+***********/
 
 * {
     box-sizing: border-box;
@@ -24,15 +28,60 @@ section {
     margin: 0 5rem ;
 }
 .btn {
-    border:2px solid skyblue;
-    padding: 5px 8px;
+    border:1px solid black;
+    border-radius: 4px;
+    padding: 5px 15px;
     text-decoration: none;
     font-size: 2rem;
     font-weight:500;
-    color: skyblue;
+    color: black;
+    //background: #acd9f4;
+    font-family: Blk;
+    position: relative;
+    z-index: 1;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    z-index: -1;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+}
+.btn:hover::before {
+    transform: scaleX(1);
+    transform-origin:left; 
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+h1::after{
+    content: '';
+    position: absolute;
+    background: currentColor;
+    left:0;
+    bottom: 0;
+    height:2px;
+    width:100%;
+    z-index: -1;
+    transform:scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in;
+}
+h1:hover::after{
+    transform: scaleX(1);
+    transform-origin:left;
 }
 /***********
-   General
+ Typography
 ***********/
 h1 {
     font-family: Blk;
@@ -45,7 +94,7 @@ h3 {
     font-size: 2.5rem;
 }
 /**********
-
+    NAV
 **********/
 
 
@@ -67,26 +116,63 @@ h3 {
     i {
         font-size: 25px;
         color: #92acc3;
+        margin-left:1em;
     }
 }
 
-
+/**********
+    HERO
+**********/
 .hero {
     display:flex;
     align-items: center;
     //background-color: skyblue;
     //background-size: 50%;
+    .txt-ctr{
+        //height:100%;
+        width: 50%;
+        //background-color: #de9e57;
+        .txt-wrap{
+            //transform: translateX(23%);
+            margin-bottom: 10%;
+        }
+        h2 {
+            //transform: translateX(23%);
+            margin-top: 2rem; 
+        }
+        h3 {
+            //transform: translateX(-9%);
+            margin: 1rem 0; 
+            //text-align: end;    
+        }
+    }
+    .btn-ctr {
+        text-align: end;
+        //transform: translateX(50%);
+    }
+
     .img-ctr{
         height:100%;
-        width:50%;
+        width:40%;
         background-color: #de9e57;
         display:flex;
         align-items: center;
         img {
             width:100%;
+            transform: translateX(5%);
+            transition: all .15s ;
+        }
+        img:hover {
+            rotate: 25deg;
+            transform: translateY(-10%);
         }
     }
 }
+
+
+/**********
+   SKILLS
+**********/
 
 .skills {
     //display:flex;
@@ -98,15 +184,74 @@ h3 {
     }
 
     .sk-icon-ctr ul {
+        width:100%;
         display:flex;
         justify-content: space-between;
+        align-items: center;
+        li {
+            list-style: none;
+            width: 15%;
+            
+            img{
+               width:100%; 
+            }
+            P {
+                text-align: center; 
+                font-size: 1.5rem;
+            }
+        }
     }
 }
 
 .contact {
+
+    .contact-ctr{
+        display: flex;
+    }
     .gif-ctr{
         width: 50%;
         height: 100%;
         background-color: #5edfa7;
+        img{
+            transform: translate(110%, 30%);
+        }
+    }
+    form {
+        font-size: 1rem;
+        margin-left:10%;
+        width:30%;
+        ul {
+            margin-bottom: 5%;
+            li{
+                list-style: none;
+            }
+            label {
+                display: block;
+            }
+            input, textarea {
+                padding:8px 6px;
+                width: 100%;
+                border: 1px solid #ffca60;
+                border-radius: 4px;
+            }
+            textarea {
+                resize: none;
+            }
+            .btn {
+
+            }
+        }
+    }
+}
+
+
+
+/**********
+   FOOTER
+**********/
+
+footer {
+    .ft-ctr span{
+        margin-left:10%;
     }
 }

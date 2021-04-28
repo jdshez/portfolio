@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: Blk;
   src: url("Blackout Sunrise.ttf");
 }
+/***********
+   General
+***********/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,16 +24,64 @@ section {
 }
 
 .btn {
-  border: 2px solid skyblue;
-  padding: 5px 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px 15px;
   text-decoration: none;
   font-size: 2rem;
   font-weight: 500;
-  color: skyblue;
+  color: black;
+  font-family: Blk;
+  position: relative;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 200ms ease-in;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 200ms ease-in;
+}
+
+h1:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 /***********
-   General
+ Typography
 ***********/
 h1 {
   font-family: Blk;
@@ -46,7 +97,7 @@ h3 {
 }
 
 /**********
-
+    NAV
 **********/
 .nav {
   padding: 20px;
@@ -69,35 +120,111 @@ h3 {
 .menu i {
   font-size: 25px;
   color: #92acc3;
+  margin-left: 1em;
 }
 
+/**********
+    HERO
+**********/
 .hero {
   display: flex;
   align-items: center;
 }
+.hero .txt-ctr {
+  width: 50%;
+}
+.hero .txt-ctr .txt-wrap {
+  margin-bottom: 10%;
+}
+.hero .txt-ctr h2 {
+  margin-top: 2rem;
+}
+.hero .txt-ctr h3 {
+  margin: 1rem 0;
+}
+.hero .btn-ctr {
+  text-align: end;
+}
 .hero .img-ctr {
   height: 100%;
-  width: 50%;
+  width: 40%;
   background-color: #de9e57;
   display: flex;
   align-items: center;
 }
 .hero .img-ctr img {
   width: 100%;
+  transform: translateX(5%);
+  transition: all 0.15s;
+}
+.hero .img-ctr img:hover {
+  rotate: 25deg;
+  transform: translateY(-10%);
 }
 
+/**********
+   SKILLS
+**********/
 .skills .title-ctr {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 .skills .sk-icon-ctr ul {
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.skills .sk-icon-ctr ul li {
+  list-style: none;
+  width: 15%;
+}
+.skills .sk-icon-ctr ul li img {
+  width: 100%;
+}
+.skills .sk-icon-ctr ul li P {
+  text-align: center;
+  font-size: 1.5rem;
 }
 
+.contact .contact-ctr {
+  display: flex;
+}
 .contact .gif-ctr {
   width: 50%;
   height: 100%;
   background-color: #5edfa7;
+}
+.contact .gif-ctr img {
+  transform: translate(110%, 30%);
+}
+.contact form {
+  font-size: 1rem;
+  margin-left: 10%;
+  width: 30%;
+}
+.contact form ul {
+  margin-bottom: 5%;
+}
+.contact form ul li {
+  list-style: none;
+}
+.contact form ul label {
+  display: block;
+}
+.contact form ul input, .contact form ul textarea {
+  padding: 8px 6px;
+  width: 100%;
+  border: 1px solid #ffca60;
+  border-radius: 4px;
+}
+.contact form ul textarea {
+  resize: none;
+}
+/**********
+   FOOTER
+**********/
+footer .ft-ctr span {
+  margin-left: 10%;
 }
