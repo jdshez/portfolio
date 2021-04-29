@@ -14,12 +14,7 @@
   font-family: Inter;
 }
 
-body {
-  background-position: center;
-}
-
 section {
-  height: 100vh;
   margin: 0 5rem;
 }
 
@@ -80,6 +75,12 @@ h1:hover::after {
   transform-origin: left;
 }
 
+.title-ctr {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 /***********
  Typography
 ***********/
@@ -127,6 +128,7 @@ h3 {
     HERO
 **********/
 .hero {
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -140,10 +142,13 @@ h3 {
   margin-top: 2rem;
 }
 .hero .txt-ctr h3 {
-  margin: 1rem 0;
+  margin: 0rem 0 1rem 0;
 }
 .hero .btn-ctr {
   text-align: end;
+}
+.hero .btn-ctr .btn {
+  margin-right: 1rem;
 }
 .hero .img-ctr {
   height: 100%;
@@ -165,29 +170,64 @@ h3 {
 /**********
    SKILLS
 **********/
-.skills .title-ctr {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-}
 .skills .sk-icon-ctr ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .skills .sk-icon-ctr ul li {
   list-style: none;
-  width: 15%;
+  width: 25%;
+  text-align: center;
+  margin-top: 5%;
 }
 .skills .sk-icon-ctr ul li img {
-  width: 100%;
+  width: 50%;
+}
+.skills .sk-icon-ctr ul li .html-logo {
+  transform: scale(0.8);
+}
+.skills .sk-icon-ctr ul li .react-logo {
+  transform: scale(0.9);
+}
+.skills .sk-icon-ctr ul li .sass-logo {
+  transform: scale(1);
+  margin-bottom: 6.5%;
+  padding-top: 6.5%;
+}
+.skills .sk-icon-ctr ul li .git-logo {
+  transform: scale(0.85);
+}
+.skills .sk-icon-ctr ul li .node-logo {
+  transform: scale(0.85);
 }
 .skills .sk-icon-ctr ul li P {
   text-align: center;
   font-size: 1.5rem;
 }
 
+/***********
+  PROJECTS
+***********/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row .img-ctr {
+  flex-basis: 40%;
+}
+.row .description {
+  flex-basis: 55%;
+}
+
+/***********
+   CONTACT
+***********/
+.contact {
+  height: 100vh;
+}
 .contact .contact-ctr {
   display: flex;
 }
@@ -201,20 +241,27 @@ h3 {
 }
 .contact form {
   font-size: 1rem;
+  margin-top: 6%;
   margin-left: 10%;
   width: 30%;
+  padding: 10px;
+  border: 1px solid #ffca60;
+  border-radius: 4px;
+  background: #ffca60;
 }
 .contact form ul {
   margin-bottom: 5%;
 }
 .contact form ul li {
   list-style: none;
+  margin-top: 5px;
 }
 .contact form ul label {
   display: block;
 }
 .contact form ul input, .contact form ul textarea {
   padding: 8px 6px;
+  margin-top: 5px;
   width: 100%;
   border: 1px solid #ffca60;
   border-radius: 4px;
@@ -222,6 +269,10 @@ h3 {
 .contact form ul textarea {
   resize: none;
 }
+.contact form ul .btn-ctr {
+  text-align: center;
+}
+
 /**********
    FOOTER
 **********/

@@ -16,12 +16,7 @@
   font-family: Inter;
 }
 
-body {
-  background-position: center;
-}
-
 section {
-  height: 100vh;
   margin: 0 5rem;
 }
 
@@ -96,6 +91,16 @@ h1:hover::after {
           transform-origin: left;
 }
 
+.title-ctr {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 /***********
  Typography
 ***********/
@@ -152,6 +157,7 @@ h3 {
     HERO
 **********/
 .hero {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,11 +179,15 @@ h3 {
 }
 
 .hero .txt-ctr h3 {
-  margin: 1rem 0;
+  margin: 0rem 0 1rem 0;
 }
 
 .hero .btn-ctr {
   text-align: end;
+}
+
+.hero .btn-ctr .btn {
+  margin-right: 1rem;
 }
 
 .hero .img-ctr {
@@ -209,16 +219,6 @@ h3 {
 /**********
    SKILLS
 **********/
-.skills .title-ctr {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .skills .sk-icon-ctr ul {
   width: 100%;
   display: -webkit-box;
@@ -230,20 +230,79 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skills .sk-icon-ctr ul li {
   list-style: none;
-  width: 15%;
+  width: 25%;
+  text-align: center;
+  margin-top: 5%;
 }
 
 .skills .sk-icon-ctr ul li img {
-  width: 100%;
+  width: 50%;
+}
+
+.skills .sk-icon-ctr ul li .html-logo {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.skills .sk-icon-ctr ul li .react-logo {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.skills .sk-icon-ctr ul li .sass-logo {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  margin-bottom: 6.5%;
+  padding-top: 6.5%;
+}
+
+.skills .sk-icon-ctr ul li .git-logo {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.skills .sk-icon-ctr ul li .node-logo {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
 }
 
 .skills .sk-icon-ctr ul li P {
   text-align: center;
   font-size: 1.5rem;
+}
+
+/***********
+  PROJECTS
+***********/
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row .img-ctr {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.row .description {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+}
+
+/***********
+   CONTACT
+***********/
+.contact {
+  height: 100vh;
 }
 
 .contact .contact-ctr {
@@ -265,8 +324,13 @@ h3 {
 
 .contact form {
   font-size: 1rem;
+  margin-top: 6%;
   margin-left: 10%;
   width: 30%;
+  padding: 10px;
+  border: 1px solid #ffca60;
+  border-radius: 4px;
+  background: #ffca60;
 }
 
 .contact form ul {
@@ -275,6 +339,7 @@ h3 {
 
 .contact form ul li {
   list-style: none;
+  margin-top: 5px;
 }
 
 .contact form ul label {
@@ -283,6 +348,7 @@ h3 {
 
 .contact form ul input, .contact form ul textarea {
   padding: 8px 6px;
+  margin-top: 5px;
   width: 100%;
   border: 1px solid #ffca60;
   border-radius: 4px;
@@ -290,6 +356,10 @@ h3 {
 
 .contact form ul textarea {
   resize: none;
+}
+
+.contact form ul .btn-ctr {
+  text-align: center;
 }
 
 /**********
