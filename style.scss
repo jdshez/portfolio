@@ -186,9 +186,8 @@ h3 {
 
 .skills {
     //display:flex;
+    margin-top:4%;
     
-    
-
     .sk-icon-ctr ul {
         width:100%;
         display:flex;
@@ -199,7 +198,8 @@ h3 {
             list-style: none;
             width: 25%;
             text-align: center;
-            margin-top:5%;
+            margin-top:1.5%;
+            margin-bottom: .5%;
             img{
                width:50%; 
             }
@@ -231,20 +231,64 @@ h3 {
 /***********
   PROJECTS
 ***********/
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    .img-ctr{
-        flex-basis:40%;
-        img{
-            //width:100%;
-            //object-fit: cover;
+.projects {
+    margin-top:4%;
+    h1{
+        margin-bottom: 2.5%;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        
+
+        .img-ctr{
+            width:40%;
+
+            .img1 {
+                background: url('/imgs/vpnflix-still.png');
+            }
+            .img2 {
+                background: url('/imgs/firewall.png');
+            }
+            .img3 {
+                background: url('');
+            }
+            .img4 {
+                background: url('');
+            }
+            .img{
+                //width:100%;
+                height: 220px;   
+                background-size: contain;
+                background-repeat: no-repeat;
+                //object-fit: cover;
+                transition: .3s ease-out;
+            }
+        
+        }
+        .img-ctr:hover .img1{
+            background-image: url('/imgs/vpnflixhover-min.gif');
+            transform: scale(1.1);
+        }
+        .img-ctr:hover .img2{
+            background-image: url('/imgs/firewallhover-min.gif');
+            transform: scale(1.1);
+        }
+        .img-ctr:hover .img3{
+            background-image: url('/imgs/');
+            transform: scale(1.1);
+        }
+        .img-ctr:hover .img4{
+            background-image: url('/imgs/');
+            transform: scale(1.1);
+        }
+
+        .description{
+            flex-basis:55%;
         }
     }
-    .description{
-        flex-basis:55%;
-    }
 }
+
 
 /***********
    CONTACT
@@ -252,12 +296,13 @@ h3 {
 
 .contact {
     height: 100vh;
+    margin-top:4%;
     .contact-ctr{
         display: flex;
     }
     .gif-ctr{
         width: 50%;
-        height: 100%;
+        
         background-color: #5edfa7;
         img{
             transform: translate(110%, 30%);
@@ -291,9 +336,9 @@ h3 {
             textarea {
                 resize: none;
             }
-            .btn-ctr {
-                text-align: center;
-            }
+        }
+        .btn-ctr {
+            text-align: center;
         }
     }
 }

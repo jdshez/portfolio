@@ -219,6 +219,10 @@ h3 {
 /**********
    SKILLS
 **********/
+.skills {
+  margin-top: 4%;
+}
+
 .skills .sk-icon-ctr ul {
   width: 100%;
   display: -webkit-box;
@@ -238,7 +242,8 @@ h3 {
   list-style: none;
   width: 25%;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 1.5%;
+  margin-bottom: .5%;
 }
 
 .skills .sk-icon-ctr ul li img {
@@ -280,7 +285,15 @@ h3 {
 /***********
   PROJECTS
 ***********/
-.row {
+.projects {
+  margin-top: 4%;
+}
+
+.projects h1 {
+  margin-bottom: 2.5%;
+}
+
+.projects .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,12 +301,59 @@ h3 {
       flex-wrap: wrap;
 }
 
-.row .img-ctr {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+.projects .row .img-ctr {
+  width: 40%;
 }
 
-.row .description {
+.projects .row .img-ctr .img1 {
+  background: url("/imgs/vpnflix-still.png");
+}
+
+.projects .row .img-ctr .img2 {
+  background: url("/imgs/firewall.png");
+}
+
+.projects .row .img-ctr .img3 {
+  background: url("");
+}
+
+.projects .row .img-ctr .img4 {
+  background: url("");
+}
+
+.projects .row .img-ctr .img {
+  height: 220px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.projects .row .img-ctr:hover .img1 {
+  background-image: url("/imgs/vpnflixhover-min.gif");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row .img-ctr:hover .img2 {
+  background-image: url("/imgs/firewallhover-min.gif");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row .img-ctr:hover .img3 {
+  background-image: url("/imgs/");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row .img-ctr:hover .img4 {
+  background-image: url("/imgs/");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row .description {
   -ms-flex-preferred-size: 55%;
       flex-basis: 55%;
 }
@@ -303,6 +363,7 @@ h3 {
 ***********/
 .contact {
   height: 100vh;
+  margin-top: 4%;
 }
 
 .contact .contact-ctr {
@@ -313,7 +374,6 @@ h3 {
 
 .contact .gif-ctr {
   width: 50%;
-  height: 100%;
   background-color: #5edfa7;
 }
 
@@ -358,7 +418,7 @@ h3 {
   resize: none;
 }
 
-.contact form ul .btn-ctr {
+.contact form .btn-ctr {
   text-align: center;
 }
 
