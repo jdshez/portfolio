@@ -174,7 +174,8 @@ h3 {
   margin-top: 4%;
 }
 .skills .sk-icon-ctr ul {
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -224,6 +225,7 @@ h3 {
 .projects .row {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 5%;
 }
 .projects .row .img-ctr {
   width: 40%;
@@ -235,10 +237,10 @@ h3 {
   background: url("/imgs/firewall.png");
 }
 .projects .row .img-ctr .img3 {
-  background: url("");
+  background: url("/imgs/hotp-still.png");
 }
 .projects .row .img-ctr .img4 {
-  background: url("");
+  background: url("/imgs/travel-still.png");
 }
 .projects .row .img-ctr .img {
   height: 220px;
@@ -255,15 +257,48 @@ h3 {
   transform: scale(1.1);
 }
 .projects .row .img-ctr:hover .img3 {
-  background-image: url("/imgs/");
+  background-image: url("/imgs/hotp-min.gif");
   transform: scale(1.1);
 }
 .projects .row .img-ctr:hover .img4 {
-  background-image: url("/imgs/");
+  background-image: url("/imgs/travel-email-min.gif");
   transform: scale(1.1);
 }
 .projects .row .description {
-  flex-basis: 55%;
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+}
+.projects .row .description .details {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .row .description .links i {
+  font-size: 2.5rem;
+}
+.projects .row .description .links .fa-github {
+  margin-right: 1.3rem;
+}
+.projects .row .description .lk1 i {
+  color: #dc1a28;
+}
+.projects .row .description .lk2 i {
+  color: #f36e21;
+}
+.projects .row .description .lk3 i {
+  color: #846c63;
+}
+.projects .row .description .lk4 i {
+  color: #003399;
+}
+.projects .row .description .vpn-logo {
+  width: 110px;
+}
+.projects .row .description .sw-logo {
+  width: 158px;
 }
 
 /***********
@@ -278,14 +313,22 @@ h3 {
 }
 .contact .gif-ctr {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #5edfa7;
 }
 .contact .gif-ctr img {
+  max-width: 300px;
   transform: translate(110%, 30%);
+}
+.contact .gif-ctr span {
+  margin: 0 auto;
 }
 .contact form {
   font-size: 1rem;
-  margin-top: 6%;
+  margin-top: 3%;
+  margin-bottom: 10%;
   margin-left: 10%;
   width: 30%;
   padding: 10px;
