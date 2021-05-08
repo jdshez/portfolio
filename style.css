@@ -235,13 +235,17 @@ h3 {
   width: 100%;
 }
 
-.logo {
+.nav .logo-ctr {
+  text-decoration: none;
+}
+
+.nav .logo-ctr .logo {
   font-family: 'Monoton', cursive;
   font-size: 30px;
   color: #7e7b7b;
 }
 
-.menu {
+.nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,10 +254,11 @@ h3 {
           align-items: center;
 }
 
-.menu i {
+.nav .menu i {
   font-size: 25px;
-  color: #92acc3;
+  color: #343138;
   margin-left: 1em;
+  z-index: 10;
 }
 
 /**********
@@ -434,30 +439,6 @@ h3 {
   transition: .3s ease-out;
 }
 
-.projects .row .img-ctr:hover .img1 {
-  background-image: url("/imgs/vpnflixhover-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.projects .row .img-ctr:hover .img2 {
-  background-image: url("/imgs/firewallhover-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.projects .row .img-ctr:hover .img3 {
-  background-image: url("/imgs/hotp-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-.projects .row .img-ctr:hover .img4 {
-  background-image: url("/imgs/travel-email-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .projects .row .description {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
@@ -484,6 +465,12 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.projects .row .description .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .projects .row .description .links a:hover i {
@@ -523,6 +510,30 @@ h3 {
   width: 158px;
 }
 
+.projects .row1:hover .img1 {
+  background-image: url("/imgs/vpnflixhover-min.gif");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row2:hover .img2 {
+  background-image: url("/imgs/firewallhover-min.gif");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row3:hover .img3 {
+  background-image: url("/imgs/hotp-min.gif");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.projects .row4:hover .img4 {
+  background-image: url("/imgs/travel-email-min.gif");
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 /***********
    CONTACT
 ***********/
@@ -554,11 +565,16 @@ h3 {
 
 .contact .gif-ctr .cont-blurb {
   text-align: center;
+  line-height: 2;
 }
 
 .contact .gif-ctr .cont-blurb p {
   font-size: 1.2rem;
   margin-top: 3%;
+}
+
+.contact .gif-ctr .cont-blurb .p2 {
+  margin-top: 15%;
 }
 
 .contact .gif-ctr img {
@@ -612,22 +628,9 @@ h3 {
   text-align: center;
 }
 
-.contact form .btn {
-  cursor: pointer;
-  border-radius: 4px;
-  padding: 5px 15px;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: black;
-  position: relative;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.contact form .btn:hover {
-  color: black;
+.contact form .btn-ctr button {
+  background: transparent;
+  border-style: none;
 }
 
 /**********

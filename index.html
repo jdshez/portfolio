@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
-    <script src="https://use.fontawesome.com/77a33ae965.js"></script>
-    <script src="../index.js"></script>
+    <script src="https://kit.fontawesome.com/b5225cee84.js" crossorigin="anonymous"></script>
+    <script src="/index.js"></script>
 </head>
 <body>
     <nav class="nav">
-        <a class="logo-ctr" ref="#">
+        <a class="logo-ctr" href="#hero">
             <h5 class="logo">dS</h5>
         </a>
         <div class="menu">
-            <a href="#" class="gh"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/jdshez" class="gh"><i class="fa fa-github" aria-hidden="true"></i></a>
             <a href="#" class="li"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a href="#" class="mail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a href="mailto:jd_shez@protonmail.com" class="mail"><i class="fa fa-envelope" aria-hidden="true"></i></a>
         </div>
     
     </nav>
     <!--HERO-->
-    <section class="hero">
+    <section class="hero" id="hero">
         
         <div class="txt-ctr">
             <h1>HELLO</h1>
@@ -31,14 +31,14 @@
             <h3>a web developer based in London.</h3>
         </div>
         <div class="btn-ctr">
-            <a href="" class="btn">
+            <a href="#projects" class="btn">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 PROJECTS
             </a>
-            <a href="" class="btn">
+            <a href="#contact" class="btn">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -95,9 +95,9 @@
         
     </section>
     <!--Projects-->
-    <section class="projects">
+    <section class="projects" id="projects">
         <h1>Projects</h1>
-        <div class="row">
+        <div class="row row1">
             <div class="img-ctr">
                 <div class="img img1"></div>
             </div>
@@ -112,14 +112,14 @@
                         <a href="" class="gh">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="" class="live">
+                        <a href="http://vpnflix.glitch.me/#home" class="live">
                             <i class="fa fa-cloud" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row row2">
             <div class="description">
                 <div class="details">
                     <img src="https://d3ik27cqx8s5ub.cloudfront.net/bt/img/Logo.svg" alt="SonicWall logo" class="sw-logo">
@@ -127,10 +127,10 @@
                         A website for Sonicwall firewall manufacturer made with HTML, CSS and Javascript with some <b>GSAP animations</b> to bring it to life.
                     </div>
                     <div class="links lk2">
-                        <a href="" class="gh">
+                        <a href="https://github.com/jdshez/firewall" class="gh">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="" class="live">
+                        <a href="https://jdshez.github.io/firewall/" class="live">
                             <i class="fa fa-cloud" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -140,7 +140,7 @@
                 <div class="img img2"></div>
             </div>
         </div>
-        <div class="row">
+        <div class="row row3">
             <div class="img-ctr">
                 <div class="img img3"></div>
             </div>
@@ -151,17 +151,17 @@
                         A blog site created with <b>React (Router, Context and Hooks)</b> that retreives data from a news <b>API</b> based on user input. <b>Auth0</b> authentication is implemented alongside a demo alternative. I used <b>MaterializeCSS</b> framework for the styles. 
                     </div>
                     <div class="links lk3">
-                        <a href="" class="gh">
+                        <a href="https://github.com/jdshez/HotOffThePress" class="gh">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="" class="live">
+                        <a href="https://jdshez.github.io/HotOffThePress/" class="live">
                             <i class="fa fa-cloud" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row row4">
             <div class="description">
                 <div class="details">
                     <img src="imgs/Footer-logo-edreams.png" alt="eDreams logo" class="ed-logo">
@@ -169,11 +169,12 @@
                         An example of an <b>HTML e-mail</b> I recreated using tables and in-line styling.
                     </div>
                     <div class="links lk4">
-                        <a href="" class="gh">
+                        <a href="https://jdshez.github.io/HotOffThePress/" class="gh" alt="code">
                             <i class="fa fa-github" aria-hidden="true"></i>
                         </a>
+                        
                         <a href="" class="live">
-                            LIVE
+                            <i class="fa fa-cloud" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -184,35 +185,36 @@
         </div>
     </section>
     <!--Contact-->
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="title-ctr">
             <h1>Contact</h1>
         </div>
         <div class="contact-ctr">
             <div class="gif-ctr">
                 <div class="cont-blurb">
-                    <p>Have a project you need help on?<br>
-                    A job prospect you think I might be interested in?<br>
-                     <br>
-                    I'll always try to get back to you within 24 hours.</p>
+                    <p>Have a project you need help with?<br>
+                    A job prospect you think I might be interested in?<br> 
+
+                    </p>
                     <img src="/imgs/fistbump.gif" alt="" class="">
+                    <p class="p2">I'll always try to get back to you within 24 hours.</p>
                 </div>
                 
                 <span class="footer">© 2021 Daniel Sheridan. All Rights Reserved.</span> 
             </div>
-            <form action="">
+            <form action="https://formspree.io/f/moqyjopo" method="POST">
                 <ul class="form-list">
                     <li class="email">
-                        <label for="">Email</label>
-                        <input type="email">
+                        <label for="email">Email</label>
+                        <input type="email" name="_replyto" id="email">
                     </li>
                     <li class="fname">
                         <label for="">Full Name</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="_name" id="name">
                     </li>
                     <li class="lname">
                         <label for="">Subject</label>
-                        <input type="text" name="" id="">
+                        <input type="text" name="_subject" id="subject">
                     </li>
                     
                    
@@ -222,13 +224,13 @@
                     </li>
                 </ul>
                 <div class="btn-ctr">
-                    <a class="btn" type="submit" value="Submit">
+                    <button class="btn" type="submit" value="Submit">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span>
                         SUBMIT
-                    </a>
+                    </button>
                 </div>
             </form>
         </div>

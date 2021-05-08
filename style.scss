@@ -177,21 +177,31 @@ h3 {
     justify-content: space-between;
     position:fixed;
     width: 100%;
-}
-.logo {
-    font-family: 'Monoton', cursive;
-    font-size: 30px;
-    color:rgb(126, 123, 123);
-}
-.menu {
-    display: flex;
-    align-items: center;
-    i {
-        font-size: 25px;
-        color: #92acc3;
-        margin-left:1em;
+
+    .logo-ctr{
+        text-decoration: none;
+        
+        .logo {
+            font-family: 'Monoton', cursive;
+            font-size: 30px;
+            color:rgb(126, 123, 123);
+        }
     }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        i {
+            font-size: 25px;
+            color: #343138; //#92acc3;
+            margin-left:1em;
+            z-index: 10;
+        }
+    }
+    
 }
+
+
 
 /**********
     HERO
@@ -243,6 +253,7 @@ h3 {
         img:hover {
             rotate: 25deg;
             transform: translateY(-10%);
+            //transition: all .15s ;
         }
     }
 }
@@ -335,22 +346,6 @@ h3 {
             }
         
         }
-        .img-ctr:hover .img1{
-            background-image: url('/imgs/vpnflixhover-min.gif');
-            transform: scale(1.1);
-        }
-        .img-ctr:hover .img2{
-            background-image: url('/imgs/firewallhover-min.gif');
-            transform: scale(1.1);
-        }
-        .img-ctr:hover .img3{
-            background-image: url('/imgs/hotp-min.gif');
-            transform: scale(1.1);
-        }
-        .img-ctr:hover .img4{
-            background-image: url('/imgs/travel-email-min.gif');
-            transform: scale(1.1);
-        }
 
         .description{            
             flex-basis:60%;
@@ -367,6 +362,7 @@ h3 {
                 }
             }
             .links {
+                display:flex;
                 a:hover i{
                     transform: translateY(-10%);
                     //transition: transform .4s ease-in;
@@ -399,6 +395,22 @@ h3 {
             }
         }
     }
+    .row1:hover .img1{
+        background-image: url('/imgs/vpnflixhover-min.gif');
+        transform: scale(1.1);
+    }
+    .row2:hover .img2{
+        background-image: url('/imgs/firewallhover-min.gif');
+        transform: scale(1.1);
+    }
+    .row3:hover .img3{
+        background-image: url('/imgs/hotp-min.gif');
+        transform: scale(1.1);
+    }
+    .row4:hover .img4{
+        background-image: url('/imgs/travel-email-min.gif');
+        transform: scale(1.1);
+    }
 }
 
 
@@ -420,9 +432,13 @@ h3 {
         background-color: #5edfa7;
         .cont-blurb {
             text-align: center;
+            line-height: 2;
             p {
                 font-size: 1.2rem;
                 margin-top: 3%;
+            }
+            .p2{
+                margin-top: 15%;
             }
         }
         img{
@@ -465,27 +481,14 @@ h3 {
         }
         .btn-ctr {
             text-align: center;
+        
+            button {
+                background:transparent;
+                border-style: none;
+            }
         }
-        .btn {
-            cursor: pointer;
-            border-radius: 4px;
-            padding: 5px 15px;
-            text-decoration: none;
-            font-size: 2rem;
-            font-weight:700;
-            letter-spacing: 1px;
-            //color: rgba(255,255,255, 0.4);
-            color: rgba(0,0,0,1);
-            //background: #262c37;
-            //font-family: Blk;
-            position: relative;
-            transition: 0.5s;
-            //z-index: 1;
-        }
-        .btn:hover{
-            //color: rgba(255,255,255, 1);
-            color: rgba(0,0,0, 1);
-        }
+        
+        
     }
 }
 
