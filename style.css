@@ -204,6 +204,21 @@ h1:hover::after {
           justify-content: flex-end;
 }
 
+@media (max-width: 780px) {
+  section {
+    margin: 0 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+
 /***********
  Typography
 ***********/
@@ -324,6 +339,18 @@ h3 {
           transform: translateY(-10%);
 }
 
+@media (max-width: 900px) {
+  .hero .txt-ctr {
+    width: 80%;
+  }
+  .hero .txt-ctr .btn-ctr {
+    text-align: center;
+  }
+  .hero .img-ctr {
+    width: 20%;
+  }
+}
+
 /**********
    SKILLS
 **********/
@@ -391,11 +418,52 @@ h3 {
   font-size: 1.5rem;
 }
 
+@media (max-width: 600px) {
+  .skills .sk-icon-ctr ul li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills .sk-icon-ctr {
+    margin-bottom: 4%;
+  }
+  .skills .sk-icon-ctr ul li {
+    width: 100%;
+  }
+}
+
 /***********
   PROJECTS
 ***********/
 .projects {
   margin-top: 4%;
+  /*.row1:hover .test-img{
+        //height:0;
+        transform: scale(1.1);
+    }
+    .row1:hover .test-img-hov{
+        width:100%;
+        transform: scale(1.1);
+        height:auto;
+    }
+    .row1:hover .img1{
+        background-image: url('/imgs/vpnflixhover-min.gif');
+        transform: scale(1.1);
+    }
+    .row2:hover .img2{
+        background-image: url('/imgs/firewallhover-min.gif');
+        transform: scale(1.1);
+    }
+    .row3:hover .img3{
+        background-image: url('/imgs/hotp-min.gif');
+        transform: scale(1.1);
+    }
+    .row4:hover .img4{
+        background-image: url('/imgs/travel-email-min.gif');
+        transform: scale(1.1);
+    }
+    */
 }
 
 .projects h1 {
@@ -413,30 +481,44 @@ h3 {
 
 .projects .row .img-ctr {
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*.test-img-hov{
+                //transform:scale(0);
+                height:0;
+                transition: all .3s ease-out;
+            }
+            .img1 {
+                background: url('/imgs/vpnflix-still.png');
+            }
+            .img2 {
+                background: url('/imgs/firewall.png');
+            }
+            .img3 {
+                background: url('/imgs/hotp-still.png');
+            }
+            .img4 {
+                background: url('/imgs/travel-still.png');
+            }
+            .img{
+                //width:100%;
+                height: 220px;   
+                background-size: contain;
+                background-repeat: no-repeat;
+                //object-fit: cover;
+                transition: .3s ease-out;
+            }
+            */
 }
 
-.projects .row .img-ctr .img1 {
-  background: url("/imgs/vpnflix-still.png");
-}
-
-.projects .row .img-ctr .img2 {
-  background: url("/imgs/firewall.png");
-}
-
-.projects .row .img-ctr .img3 {
-  background: url("/imgs/hotp-still.png");
-}
-
-.projects .row .img-ctr .img4 {
-  background: url("/imgs/travel-still.png");
-}
-
-.projects .row .img-ctr .img {
-  height: 220px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  -webkit-transition: .3s ease-out;
-  transition: .3s ease-out;
+.projects .row .img-ctr .row-img {
+  width: 100%;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .projects .row .description {
@@ -510,28 +592,64 @@ h3 {
   width: 158px;
 }
 
-.projects .row1:hover .img1 {
-  background-image: url("/imgs/vpnflixhover-min.gif");
+.projects .row:hover .row-img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.projects .row2:hover .img2 {
-  background-image: url("/imgs/firewallhover-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .projects {
+    margin: 0 1rem;
+  }
+  .projects .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .projects .row .img-ctr {
+    width: 100%;
+  }
+  .projects .row .img-ctr .img {
+    height: 190px;
+  }
+  .projects .row .description {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .projects .row .description .details {
+    width: 90%;
+  }
+  .projects .row .description .details .blurb {
+    margin: 5% 0;
+  }
+  .projects .row2, .projects .row4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
-.projects .row3:hover .img3 {
-  background-image: url("/imgs/hotp-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (max-width: 630px) {
+  .project .img-ctr {
+    width: 75%;
+  }
 }
 
-.projects .row4:hover .img4 {
-  background-image: url("/imgs/travel-email-min.gif");
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+@media (max-width: 780px) {
+  .project .img-ctr {
+    width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .project .img-ctr {
+    width: 65%;
+  }
 }
 
 /***********
@@ -631,6 +749,65 @@ h3 {
 .contact form .btn-ctr button {
   background: transparent;
   border-style: none;
+}
+
+@media (max-width: 1150px) {
+  .contact .gif-ctr img {
+    -webkit-transform: translate(35%, 30%);
+            transform: translate(35%, 30%);
+  }
+  .contact form {
+    margin-left: auto;
+    width: 35%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-ctr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contact-ctr .gif-ctr {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 75%;
+  }
+  .contact-ctr .gif-ctr img {
+    -webkit-transform: translate(0%, 30%);
+            transform: translate(0%, 30%);
+  }
+  .contact-ctr form {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-left: 0;
+    width: 50%;
+    margin-bottom: 1%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact form {
+    width: 85%;
+  }
+  .contact .gif-ctr {
+    width: 100%;
+  }
+  .contact .gif-ctr img {
+    display: none;
+  }
+  .contact .gif-ctr .cont-blurb p, .contact .gif-ctr .cont-blurb .p2 {
+    font-size: 1rem;
+  }
+  .contact .gif-ctr .cont-blurb .p2 {
+    margin: 2.5% 0;
+  }
+  .contact .gif-ctr .footer {
+    font-size: 12px;
+  }
 }
 
 /**********

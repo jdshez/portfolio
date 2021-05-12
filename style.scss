@@ -153,6 +153,21 @@ h1:hover::after{
     display:flex;
     justify-content: flex-end;
 }
+
+@media (max-width:780px){
+    section{
+        margin:0 1rem;
+    }
+    h1{
+        font-size:3rem; 
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
 /***********
  Typography
 ***********/
@@ -258,7 +273,19 @@ h3 {
     }
 }
 
-
+@media (max-width:900px) {
+    .hero {
+        .txt-ctr{
+            width: 80%;
+            .btn-ctr{
+                text-align: center;
+            }
+        }
+        .img-ctr{
+            width: 20%;
+        }
+    }
+}
 /**********
    SKILLS
 **********/
@@ -307,6 +334,25 @@ h3 {
         }
     }
 }
+@media (max-width:600px) {
+    .skills {
+        .sk-icon-ctr {
+            ul li {
+                width:50%;
+            }
+        }
+    }
+}
+@media (max-width:480px) {
+    .skills {
+        .sk-icon-ctr {
+            margin-bottom: 4%;
+            ul li {
+                width:100%;
+            }
+        }
+    }
+}
 
 /***********
   PROJECTS
@@ -323,7 +369,17 @@ h3 {
 
         .img-ctr{
             width:40%;
-
+            display:flex;
+            align-items: center;
+            .row-img{
+                width:100%;
+                transition: all .3s ease-out;
+            }
+            /*.test-img-hov{
+                //transform:scale(0);
+                height:0;
+                transition: all .3s ease-out;
+            }
             .img1 {
                 background: url('/imgs/vpnflix-still.png');
             }
@@ -344,7 +400,7 @@ h3 {
                 //object-fit: cover;
                 transition: .3s ease-out;
             }
-        
+            */
         }
 
         .description{            
@@ -395,6 +451,15 @@ h3 {
             }
         }
     }
+    /*.row1:hover .test-img{
+        //height:0;
+        transform: scale(1.1);
+    }
+    .row1:hover .test-img-hov{
+        width:100%;
+        transform: scale(1.1);
+        height:auto;
+    }
     .row1:hover .img1{
         background-image: url('/imgs/vpnflixhover-min.gif');
         transform: scale(1.1);
@@ -411,8 +476,70 @@ h3 {
         background-image: url('/imgs/travel-email-min.gif');
         transform: scale(1.1);
     }
+    */
+    .row:hover .row-img {
+        transform: scale(1.1);
+    }
 }
 
+@media (max-width: 480px) {
+    
+    h1 {
+        font-size: 3rem;
+    }
+
+    .projects {
+    margin: 0 1rem;
+
+        .row{
+            flex-direction: column;
+            .img-ctr{
+                width:100%;
+                .img {
+                    height: 190px;
+                }
+            }
+            .description{
+                flex-basis: 100%;
+                .details{
+                    width: 90%;
+                    .blurb{
+                        margin: 5% 0;
+                    }
+                }
+            }
+        }
+        .row2, .row4{
+            flex-direction: column-reverse;
+        }
+    }
+
+}
+
+@media (max-width: 630px) {
+    .project {
+        .img-ctr{
+            width:75%;
+        }
+    }
+
+}
+@media (max-width: 780px) {
+    .project {
+        .img-ctr{
+            width:60%;
+        }
+    }
+
+}
+@media (max-width: 900px) {
+    .project {
+        .img-ctr{
+            width:65%;
+        }
+    }
+
+}
 
 /***********
    CONTACT
@@ -492,7 +619,62 @@ h3 {
     }
 }
 
+@media (max-width: 1150px) {
+    .contact {
+        .gif-ctr img {
+            transform: translate(35%,30%);
+        }
+        form{
+            margin-left: auto;
+            width: 35%;
+        }
 
+    }
+} 
+
+@media (max-width: 900px) {
+    .contact-ctr {
+        flex-direction: column-reverse;
+        .gif-ctr {
+           align-self: center;
+           width:75%;
+           img{
+            transform: translate(0%,30%);
+           }
+        }
+        form{
+            align-self: center;
+            margin-left: 0;
+            width: 50%;
+            margin-bottom:1%;
+        }
+
+    }
+}
+@media (max-width: 600px) {
+    .contact {
+        form {
+            width:85%
+        }
+        .gif-ctr{
+            width: 100%;
+            img {
+                display: none;
+            }
+            .cont-blurb{
+                p, .p2{
+                    font-size: 1rem;
+                }
+                .p2{
+                    margin:2.5% 0;
+                }
+            }
+            .footer{
+                font-size: 12px;
+            }
+        }
+    }
+} 
 
 /**********
    FOOTER
