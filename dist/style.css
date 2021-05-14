@@ -447,7 +447,7 @@ h3 {
   transform: scale(1.1);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 630px) {
   h1 {
     font-size: 3rem;
   }
@@ -460,12 +460,17 @@ h3 {
   }
   .projects .row .img-ctr {
     width: 100%;
+    justify-content: center;
+    /* .img {
+         height: 190px;
+     }*/
   }
-  .projects .row .img-ctr .img {
-    height: 190px;
+  .projects .row .img-ctr .row-img {
+    width: 90%;
   }
   .projects .row .description {
     flex-basis: 100%;
+    margin-top: 3%;
   }
   .projects .row .description .details {
     width: 90%;
@@ -477,11 +482,14 @@ h3 {
     flex-direction: column-reverse;
   }
 }
-@media (max-width: 630px) {
-  .project .img-ctr {
-    width: 75%;
-  }
-}
+/*@media (max-width: 630px) {
+    .project {
+        .img-ctr{
+            width:75%;
+        }
+    }
+
+}*/
 @media (max-width: 780px) {
   .project .img-ctr {
     width: 60%;
@@ -581,7 +589,7 @@ h3 {
   }
   .contact-ctr .gif-ctr {
     align-self: center;
-    width: 75%;
+    width: 100%;
   }
   .contact-ctr .gif-ctr img {
     transform: translate(0%, 30%);
@@ -596,9 +604,6 @@ h3 {
 @media (max-width: 600px) {
   .contact form {
     width: 85%;
-  }
-  .contact .gif-ctr {
-    width: 100%;
   }
   .contact .gif-ctr img {
     display: none;
